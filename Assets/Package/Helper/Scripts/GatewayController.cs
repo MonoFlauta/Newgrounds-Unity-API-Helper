@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using io.newgrounds;
 using io.newgrounds.results.Gateway;
@@ -54,8 +53,7 @@ namespace Package.Helper.Scripts
             var request = new io.newgrounds.components.Gateway.getVersion();
             request.callWith(_core, result =>
             {
-                var versionValues = result.version.Split('.').Select(int.Parse).ToArray();
-                onGetVersion(new Version(versionValues));
+                onGetVersion(new Version(result.version));
             });
         }
     }

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b00b885-6d44-413b-89bd-a7c70166722f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/LoaderController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/LoaderController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Newgrounds-Unity-API-Helper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Newgrounds-Unity-API-Helper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/AppController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/AppController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/GatewayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/GatewayController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/NewgroundsAPIHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/NewgroundsAPIHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/Version.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/Version.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648246263354</updated>
       <workItem from="1648246264936" duration="955000" />
-      <workItem from="1648247244809" duration="723000" />
+      <workItem from="1648247244809" duration="2007000" />
     </task>
     <servers />
   </component>

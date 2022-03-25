@@ -40,6 +40,7 @@ namespace Package.Helper.Scripts
         private EventController _eventController;
         private GatewayController _gatewayController;
         private LoaderController _loaderController;
+        private AppController _appController;
         
         private void Init()
         {
@@ -48,6 +49,7 @@ namespace Package.Helper.Scripts
             _eventController = new EventController(core);
             _gatewayController = new GatewayController(core);
             _loaderController = new LoaderController(core);
+            _appController = new AppController(core);
         }
 
         /// <summary>
@@ -311,6 +313,79 @@ namespace Package.Helper.Scripts
         public void OpenReferralUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
         {
             _loaderController.OpenReferralUrl(openInNewTab, onOpenedUrl);
+        }
+
+        /// <summary>
+        /// Gets session
+        /// </summary>
+        /// <param name="onGetSession"></param>
+        public void GetSession(Action<session> onGetSession)
+        {
+            _appController.GetSession(onGetSession);
+        }
+
+        /// <summary>
+        /// Ends session
+        /// </summary>
+        /// <param name="onEndSession">Optional on end session callback</param>
+        public void EndSession(Action onEndSession = null)
+        {
+            _appController.EndSession(onEndSession);
+        }
+
+        /// <summary>
+        /// Starts a session
+        /// </summary>
+        /// <param name="onStartSession">Optional on start session callback that returns the session</param>
+        public void StartSession(Action<session> onStartSession = null)
+        {
+            _appController.StartSession(onStartSession);
+        }
+
+        /// <summary>
+        /// Increments "Total Views" statistic.
+        /// </summary>
+        /// /// <param name="onLogView">Optional on log view callback</param>
+        public void LogView(Action onLogView = null)
+        {
+            _appController.LogView(onLogView);
+        }
+
+        
+        /// <summary>
+        /// Gets latest version in string format
+        /// </summary>
+        /// <param name="onGetLatestVersion">On get latest version callback</param>
+        public void GetLatestVersion(Action<string> onGetLatestVersion)
+        {
+            _appController.GetLatestVersion(onGetLatestVersion);
+        }
+
+        /// <summary>
+        /// Get latest version in version format
+        /// </summary>
+        /// <param name="onGetLatestVersion">On get latest version callback</param>
+        public void GetLatestVersion(Action<Version> onGetLatestVersion)
+        {
+            _appController.GetLatestVersion(onGetLatestVersion);
+        }
+
+        /// <summary>
+        /// Gets if it is a deprecated version
+        /// </summary>
+        /// <param name="onIsDeprecatedVersion">On is deprecated version callback</param>
+        public void IsDeprecatedVersion(Action<bool> onIsDeprecatedVersion)
+        {
+            _appController.IsDeprecatedVersion(onIsDeprecatedVersion);
+        }
+
+        /// <summary>
+        /// Checks a client-side host domain against domains defined in your "Game Protection" settings.
+        /// </summary>
+        /// <param name="onGetHostLicense">On get host license callback that returns true if it is approved</param>
+        public void GetHostLicense(Action<bool> onGetHostLicense)
+        {
+            _appController.GetHostLicense(onGetHostLicense);
         }
     }
 }
