@@ -39,6 +39,7 @@ namespace Package.Helper.Scripts
         private ScoreboardController _scoreboardController;
         private EventController _eventController;
         private GatewayController _gatewayController;
+        private LoaderController _loaderController;
         
         private void Init()
         {
@@ -46,6 +47,7 @@ namespace Package.Helper.Scripts
             _scoreboardController = new ScoreboardController(core);
             _eventController = new EventController(core);
             _gatewayController = new GatewayController(core);
+            _loaderController = new LoaderController(core);
         }
 
         /// <summary>
@@ -259,6 +261,56 @@ namespace Package.Helper.Scripts
         public void GetVersion(Action<Version> onGetVersion)
         {
             _gatewayController.GetVersion(onGetVersion);
+        }
+
+        /// <summary>
+        /// Loads the official URL of the app's author (as defined in your "Official URLs" settings), and logs a referral to your API stats. For apps with multiple author URLs, use Loader.loadReferral.
+        /// </summary>
+        /// <param name="openInNewTab">If should open in a new tab. Default is true</param>
+        /// <param name="onOpenedUrl">Optional on opened url callback that returns the url</param>
+        public void OpenAuthorUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
+        {
+            _loaderController.OpenAuthorUrl(openInNewTab, onOpenedUrl);
+        }
+        
+        /// <summary>
+        /// Loads the Newgrounds game portal, and logs the referral to your API stats.
+        /// </summary>
+        /// <param name="openInNewTab">If should open in a new tab. Default is true</param>
+        /// <param name="onOpenedUrl">Optional on opened url callback that returns the url</param>
+        public void OpenMoreGamesUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
+        {
+            _loaderController.OpenMoreGamesUrl(openInNewTab, onOpenedUrl);
+        }
+        
+        /// <summary>
+        /// Loads Newgrounds, and logs the referral to your API stats.
+        /// </summary>
+        /// <param name="openInNewTab">If should open in a new tab. Default is true</param>
+        /// <param name="onOpenedUrl">Optional on opened url callback that returns the url</param>
+        public void OpenNewgroundsUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
+        {
+            _loaderController.OpenNewgroundsUrl(openInNewTab, onOpenedUrl);
+        }
+        
+        /// <summary>
+        /// Loads the official URL where the latest version of your app can be found (as defined in your "Official URLs" settings), and logs a referral to your API stats.
+        /// </summary>
+        /// <param name="openInNewTab">If should open in a new tab. Default is true</param>
+        /// <param name="onOpenedUrl">Optional on opened url callback that returns the url</param>
+        public void OpenOfficialUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
+        {
+            _loaderController.OpenOfficialUrl(openInNewTab, onOpenedUrl);
+        }
+        
+        /// <summary>
+        /// Loads a custom referral URL (as defined in your "Referrals & Events" settings), and logs the referral to your API stats.
+        /// </summary>
+        /// <param name="openInNewTab">If should open in a new tab. Default is true</param>
+        /// <param name="onOpenedUrl">Optional on opened url callback that returns the url</param>
+        public void OpenReferralUrl(bool openInNewTab = true, Action<string> onOpenedUrl = null)
+        {
+            _loaderController.OpenReferralUrl(openInNewTab, onOpenedUrl);
         }
     }
 }
