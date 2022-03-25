@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b00b885-6d44-413b-89bd-a7c70166722f" name="Changes" comment="" />
+    <list default="true" id="5b00b885-6d44-413b-89bd-a7c70166722f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/GatewayController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/GatewayController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/Version.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/Version.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Newgrounds-Unity-API-Helper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Newgrounds-Unity-API-Helper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/NewgroundsAPIHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Package/Helper/Scripts/NewgroundsAPIHelper.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,16 +26,20 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="26tcJcQEuaa2ogKug7Lp0PT5Myn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -61,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648246263354</updated>
-      <workItem from="1648246264936" duration="18000" />
+      <workItem from="1648246264936" duration="955000" />
     </task>
     <servers />
   </component>
@@ -71,7 +82,19 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

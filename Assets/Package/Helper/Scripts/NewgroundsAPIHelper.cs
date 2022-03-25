@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using io.newgrounds;
 using io.newgrounds.objects;
+using io.newgrounds.results.Gateway;
 using io.newgrounds.results.Medal;
 using UnityEngine;
 
@@ -37,12 +38,14 @@ namespace Package.Helper.Scripts
         private MedalController _medalController;
         private ScoreboardController _scoreboardController;
         private EventController _eventController;
+        private GatewayController _gatewayController;
         
         private void Init()
         {
             _medalController = new MedalController(core);
             _scoreboardController = new ScoreboardController(core);
             _eventController = new EventController(core);
+            _gatewayController = new GatewayController(core);
         }
 
         /// <summary>
@@ -211,6 +214,51 @@ namespace Package.Helper.Scripts
         public void LogEvent(string eventName, Action onLogEvent = null)
         {
             _eventController.LogEvent(eventName, onLogEvent);
+        }
+
+        /// <summary>
+        /// Pings the Newgrounds server
+        /// </summary>
+        /// <param name="onPing">On ping callback</param>
+        public void Ping(Action<ping> onPing)
+        {
+            _gatewayController.Ping(onPing);
+        }
+
+        /// <summary>
+        /// Gets date time in string format
+        /// </summary>
+        /// <param name="onGetDateTime">On get date time callback</param>
+        public void GetDateTime(Action<string> onGetDateTime)
+        {
+            _gatewayController.GetDateTime(onGetDateTime);
+        }
+
+        /// <summary>
+        /// Gets date time in DateTime format
+        /// </summary>
+        /// <param name="onGetDateTime">On get date time callback</param>
+        public void GetDateTime(Action<DateTime> onGetDateTime)
+        {
+            _gatewayController.GetDateTime(onGetDateTime);
+        }
+
+        /// <summary>
+        /// Gets version in string format
+        /// </summary>
+        /// <param name="onGetVersion">On get version callback</param>
+        public void GetVersion(Action<string> onGetVersion)
+        {
+            _gatewayController.GetVersion(onGetVersion);
+        }
+
+        /// <summary>
+        /// Gets version in version format
+        /// </summary>
+        /// <param name="onGetVersion">On get version callback</param>
+        public void GetVersion(Action<Version> onGetVersion)
+        {
+            _gatewayController.GetVersion(onGetVersion);
         }
     }
 }
