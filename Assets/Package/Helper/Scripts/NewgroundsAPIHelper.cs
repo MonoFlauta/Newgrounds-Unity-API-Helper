@@ -41,6 +41,7 @@ namespace Package.Helper.Scripts
         private GatewayController _gatewayController;
         private LoaderController _loaderController;
         private AppController _appController;
+        private PassportController _passportController;
         
         private void Init()
         {
@@ -50,6 +51,7 @@ namespace Package.Helper.Scripts
             _gatewayController = new GatewayController(core);
             _loaderController = new LoaderController(core);
             _appController = new AppController(core);
+            _passportController = new PassportController(core);
         }
 
         /// <summary>
@@ -380,12 +382,21 @@ namespace Package.Helper.Scripts
         }
 
         /// <summary>
-        /// Checks a client-side host domain against domains defined in your "Game Protection" settings.
+        /// Checks a client-side host domain against domains defined in your "Game Protection" settings
         /// </summary>
         /// <param name="onGetHostLicense">On get host license callback that returns true if it is approved</param>
         public void GetHostLicense(Action<bool> onGetHostLicense)
         {
             _appController.GetHostLicense(onGetHostLicense);
+        }
+
+        /// <summary>
+        /// Tells if the user is logged in
+        /// </summary>
+        /// <param name="onIsUserLoggedIn">On is user logged in callback that returns true if the user is logged in</param>
+        public void IsUserLoggedIn(Action<bool> onIsUserLoggedIn)
+        {
+            _passportController.IsUserLoggedIn(onIsUserLoggedIn);
         }
     }
 }
