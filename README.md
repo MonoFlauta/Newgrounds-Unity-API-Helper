@@ -166,5 +166,71 @@ NewgroundsAPIHelper.Instance.OpenAuthorUrl(openInNewTab, url => {
   //Do something
 });`
 
-# Note
-This documentation is in WIP. Once it is completed this section will be removed.
+## App
+### GetSession
+You can get the session data by doing:
+
+`NewgroundsAPIHelper.Instance.GetSession(session => {
+  //Do something
+});`
+
+
+### EndSession
+You can end a session by doing:
+
+`NewgroundsAPIHelper.Instance.EndSession();`
+
+And optionally you can add a callback to know once the session was ended:
+
+`NewgroundsAPIHelper.Instance.EndSession(() => {
+  //Do something
+});`
+
+### StartSession
+You can start a session by doing:
+
+`NewgroundsAPIHelper.Instance.StartSession();`
+
+And optionally you can add a callback to know once the session was started:
+
+`NewgroundsAPIHelper.Instance.StartSession(session => {
+  //Do something
+});`
+
+### LogView
+You can increment the "Total views" stadistics by doing:
+
+`NewgroundsAPIHelper.Instance.LogView();`
+
+And optionally you can add a callback to know once it was logged:
+
+`NewgroundsAPIHelper.Instance.LogView(()=>{
+  //Do something
+});`
+
+### GetLatestVersion
+You can get the current date time in two formats: string or DateTime. In order to do so, it will depend on the callback you use.
+
+`NewgroundsAPIHelper.Instance.GetLatestVersion(OnGetLatestVersion);`
+
+### IsDepecatedVersion
+You can get to know if it is a deprecated version by doing:
+
+`NewgroundsAPIHelper.Instance.IsDeprecatedVersion(isDeprecated =>{
+  //Do something
+});`
+
+### GetHostLicense
+You can get to know if it is a domain defined in the "Game Protection" settings
+
+`NewgroundsAPIHelper.Instance.GetHostLicense(isLicensed =>{
+  //Do something
+});`
+
+## Passport
+### IsLoggedIn
+You can know if a user is logged in by doing:
+
+`NewgroundsAPIHelper.Instance.IsUserLoggedIn(isLoggedIn => {
+  //Do something
+});`
