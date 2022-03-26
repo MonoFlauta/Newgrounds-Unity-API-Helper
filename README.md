@@ -5,7 +5,7 @@ The official [Newgrounds API](https://www.newgrounds.io/) is included in the pro
 It was originally made by [Josh Tuttle (a.k.a PsychoGoldfish)](https://psychogoldfish.newgrounds.com/) and his contribution was crucial for all developers that wanted to use the Newgrounds API in their web games made with Unity.
 ## About the helper
 Even the API is already very useful as it is and you can do everything with it, I personally preferred to always create a wrapper in order to work more comfortable. The main goal of the wrapper is to simplify the use of the API and even add a few performance tricks.
-Feel free to use it or ask for help if you need it by using the [Issues section](https://github.com/MonoFlauta/Newgrounds-Unity-API-Helper/issues).
+Feel free to use it or ask for help if you need it/propose improvements by using the [Issues section](https://github.com/MonoFlauta/Newgrounds-Unity-API-Helper/issues).
 
 # How to use it
 The following list contains all the things you need to fully use the helper.
@@ -122,6 +122,7 @@ NewgroundsAPIHelper.Instance.GetGlobalScores(boardId, scores => {
 },
 period, limit, skip, filterTag);`
 
+## Events
 ### LogEvent
 You can log events by calling the following method with the event name:
 
@@ -130,6 +131,38 @@ You can log events by calling the following method with the event name:
 And you can optionally add a callback event to know if you want when the event has been logged:
 
 `NewgroundsAPIHelper.Instance.LogEvent("event name", () => {
+  //Do something
+});`
+
+## Gateway
+### Ping
+You can call Ping method and receive the result in a callback:
+
+`NewgroundsAPIHelper.Instance.Ping(ping => {
+  //Do something
+});`
+
+### GetDateTime
+You can get the current date time in two formats: string or DateTime. In order to do so, it will depend on the callback you use.
+
+`NewgroundsAPIHelper.Instance.GetDateTime(OnGetDateTime);`
+
+### GetVersion
+You can get the client version in two formats: string or Version (custom struct). In order to do so, it will depend on the callback you use.
+
+`NewgroundsAPIHelper.Instance.GetVersion(OnGetVersion);`
+
+## Loader
+### OpenAuthorUrl - OpenMoreGamesUrl - OpenNewgroundsUrl - OpenOfficialUrl - OpenReferralUrl
+You can load the urls you added on the official urls in the API dashboard by doing:
+
+`var openInNewTab = true;
+NewgroundsAPIHelper.Instance.OpenAuthorUrl(openInNewTab);`
+
+And you can add a callback to know when it worked successfully.
+
+`var openInNewTab = true;
+NewgroundsAPIHelper.Instance.OpenAuthorUrl(openInNewTab, url => {
   //Do something
 });`
 
