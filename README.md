@@ -1,3 +1,4 @@
+![](https://monoflauta.com/wp-content/uploads/2022/03/NewgroundsUnityAPIHelper-150x150-1.png)
 # Newgrounds Unity API Helper
 The Newgrounds Unity API Helper is a wrapper that tries to be more friendly for developers that use mostly Unity when trying to use the [Newgrounds](https://www.newgrounds.com/) API. It also tries to simplify its use by making the request through a single calling method or giving extra performance functionality.
 ## About the API
@@ -9,6 +10,9 @@ Feel free to use it or ask for help if you need it/propose improvements by using
 
 # How to use it
 The following list contains all the things you need to fully use the helper.
+
+![](https://monoflauta.com/wp-content/uploads/2022/03/NewgroundsUnityAPIHelperComponent.png)
+
 ## Getting started
 - In order to start, you will need to have the Package folder inside your project. Once you have it, you will be able to use it's functionality
 - Go to the Packages/Helper/Resources/ folder and enter the NewgroundsAPI prefab
