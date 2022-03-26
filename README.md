@@ -1,5 +1,5 @@
 # Newgrounds Unity API Helper
-The Newgrounds Unity API Helper is a wrapper that tries to be more friendly for developers that use mostly Unity when trying to use the [Newgrounds](https://www.newgrounds.com/) API. It also tries to simplify it's use by making the request through a single calling method or gives extra performance functionality.
+The Newgrounds Unity API Helper is a wrapper that tries to be more friendly for developers that use mostly Unity when trying to use the [Newgrounds](https://www.newgrounds.com/) API. It also tries to simplify its use by making the request through a single calling method or gives extra performance functionality.
 ## About the API
 The official [Newgrounds API](https://www.newgrounds.io/) is included in the project inside the NewgroundsUnityAPIHelper folder under the name of *NewgroundsAPI*.
 It was originally made by [Josh Tuttle (a.k.a PsychoGoldfish)](https://psychogoldfish.newgrounds.com/) and his contribution was crucial for all developers that wanted to use the Newgrounds API in their web games made with Unity.
