@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
 using io.newgrounds;
 using io.newgrounds.results.Gateway;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     internal class GatewayController
     {

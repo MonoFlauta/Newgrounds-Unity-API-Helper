@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     public readonly struct Version
     {

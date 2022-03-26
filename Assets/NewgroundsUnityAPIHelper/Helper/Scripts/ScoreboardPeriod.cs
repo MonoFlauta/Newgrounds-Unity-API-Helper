@@ -1,4 +1,4 @@
-﻿namespace Package.Helper.Scripts
+﻿namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     public enum ScoreboardPeriod
     {

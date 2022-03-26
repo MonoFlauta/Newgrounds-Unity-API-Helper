@@ -7,7 +7,7 @@ using io.newgrounds.results.Gateway;
 using io.newgrounds.results.Medal;
 using UnityEngine;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     [RequireComponent(typeof(core))]
     public class NewgroundsAPIHelper : MonoBehaviour

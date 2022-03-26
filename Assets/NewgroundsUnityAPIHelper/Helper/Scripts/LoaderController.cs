@@ -1,7 +1,7 @@
 ﻿using System;
 using io.newgrounds;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     internal class LoaderController
     {

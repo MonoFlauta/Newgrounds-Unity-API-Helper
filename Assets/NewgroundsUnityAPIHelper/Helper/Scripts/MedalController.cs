@@ -5,7 +5,7 @@ using io.newgrounds;
 using io.newgrounds.objects;
 using io.newgrounds.results.Medal;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     internal class MedalController
     {

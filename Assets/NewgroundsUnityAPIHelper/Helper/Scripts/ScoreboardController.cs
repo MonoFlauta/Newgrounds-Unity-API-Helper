@@ -4,7 +4,7 @@ using System.Linq;
 using io.newgrounds;
 using io.newgrounds.objects;
 
-namespace Package.Helper.Scripts
+namespace NewgroundsUnityAPIHelper.Helper.Scripts
 {
     internal class ScoreboardController
     {
