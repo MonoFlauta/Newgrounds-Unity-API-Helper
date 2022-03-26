@@ -46,5 +46,92 @@ To know if a medal was unlocked, replace the 1234 for the medal id:
 
 `var isMedalUnlocked = NewgroundsAPIHelper.Instance.IsMedalUnlocked(1234);`
 
+### GetAllMedals - GetAllUnlockedMedals - GetAllLockedMedals
+You can get the whole list of medals. To do so, you will need to call LoadMedals method first and make sure that it has finished by using the callback for example.
+To get the whole list of medals, call the following method:
+
+`var allMedals = NewgroundsAPIHelper.Instance.GetAllMedals();`
+
+You can also get filtered lists of medals like all unlocked medals:
+
+`var allUnlockedMedals = NewgroundsAPIHelper.Instance.GetAllUnlockedMedals();`
+
+and all locked medals:
+
+`var allLockedMedals = NewgroundsAPIHelper.Instance.GetAllLockedMedals();`
+
+### GetMedal
+You can get information from a specific medal. Unless the medal has been unlocked during the current player session, you will need to call LoadMedals method first and make sure that it has finished by using the callback for example.
+To get the information of a medal, replace the 1234 with the medal id and do the following:
+
+var medal = NewgroundsAPIHelper.Instance.GetMedal(1234);
+
+## Scoreboards
+### PostScore
+You can post scores to a specific board by doing:
+
+`var boardId = 1234;
+var score = 100;
+NewgroundsAPIHelper.Instance.PostScore(boardId, score);`
+
+If you want, you can also have a callback that let's you know once the score has been posted:
+
+`var boardId = 1234;
+var score = 100;
+NewgroundsAPIHelper.Instance.PostScore(boardId, score, () =>{ 
+  //Do something
+});`
+
+### GetScoreboard
+You can get a scoreboard in order to read it's information. In order to do that, you can do the following:
+
+`var boardId = 1234;
+NewgroundsAPIHelper.Instance.GetScoreboard(boardId, scoreboard => {
+  //Do something
+});`
+
+### GetScoreboards
+You can also get all the scoreboards if you want by doing:
+
+`NewgroundsAPIHelper.Instance.GetScoreboards(scoreboards => {
+  //Do something
+});`
+
+### GetGlobalScores - GetPersonalScores - GetSocialScores
+You can get the scores from a scoreboard and filter them by global, personal or social scores.
+- Global includes all players who posted to that scoreboard
+- Personal includes scores by the player only
+- Social includes scores by the player and his friends
+
+In order to do it you need to do:
+
+`var boardId = 1234;
+NewgroundsAPIHelper.Instance.GetGlobalScores(boardId, scores => {
+  //Do something
+});`
+
+And you can add a bunch of optional parameters:
+
+`var boardId = 1234;
+var period = ScoreboardPeriod.CurrentDay;
+var limit = 10;
+var skip = 0;
+string filterTag = null;
+NewgroundsAPIHelper.Instance.GetGlobalScores(boardId, scores => {
+  //Do something
+},
+period, limit, skip, filterTag);`
+
+### LogEvent
+You can log events by calling the following method with the event name:
+
+`NewgroundsAPIHelper.Instance.LogEvent("event name");`
+
+And you can optionally add a callback event to know if you want when the event has been logged:
+
+`NewgroundsAPIHelper.Instance.LogEvent("event name", () => {
+  //Do something
+});`
+
 # Note
 This documentation is in WIP. Once it is completed this section will be removed.
