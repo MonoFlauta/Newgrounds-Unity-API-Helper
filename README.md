@@ -16,7 +16,8 @@ The following list contains all the things you need to fully use the helper.
 ## Getting started
 - In order to start, you will need to have the Package folder inside your project. Once you have it, you will be able to use it's functionality
 - Go to the Packages/Helper/Resources/ folder and enter the NewgroundsAPI prefab
-- Set the App ID inside the core component
+- Set the App ID inside the core component with the aes_base 64 key
+
 That's all! Now you will be able to call the methods you need.
 ## Medals
 ### UnlockMedal
