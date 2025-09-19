@@ -32,7 +32,7 @@ namespace NewgroundsUnityAPIHelper.Helper.Scripts
             var request = new io.newgrounds.components.Medal.unlock { id = id };
             request.callWith(_core, result =>
             {
-                _allMedals[result.medal.id] = result.medal;
+                _allMedals.Find(medal => medal.id == id).unlocked = true;
                 onUnlock(result);
             });
         }
